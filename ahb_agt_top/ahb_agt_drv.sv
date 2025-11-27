@@ -42,20 +42,20 @@ endfunction
 //run phase of ahb agent driver
 task ahb_agt_drv::run_phase(uvm_phase phase);
     super.run_phase(phase);
-    //$display("display from the driver1");
+    $display("display from the driver1");
     //for first cycle
     @(vif.ahb_drv_cb);
     vif.ahb_drv_cb.Hresetn <= 1'b0;
     
-    //$display("display from the driver2");
+    $display("display from the driver2");
     //for second cycle
     @(vif.ahb_drv_cb);
     vif.ahb_drv_cb.Hresetn <= 1'b1;
-    //$display("display from the driver3");
+    $display("display from the driver3");
     forever
         begin
             seq_item_port.get_next_item(req);
-            //$display("display from the driver4");
+            $display("display from the driver4");
             send_to_dut(req);
             //req.print();
             seq_item_port.item_done();
