@@ -47,7 +47,7 @@ task ahb_agt_drv::run_phase(uvm_phase phase);
     @(vif.ahb_drv_cb);
     vif.ahb_drv_cb.Hresetn <= 1'b0;
     
-    $display("display from the driver2");
+    //$display("display from the driver2");
     //for second cycle
     @(vif.ahb_drv_cb);
     vif.ahb_drv_cb.Hresetn <= 1'b1;
