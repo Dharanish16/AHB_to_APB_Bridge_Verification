@@ -42,7 +42,7 @@ endfunction
 //run phase of ahb agent driver
 task ahb_agt_drv::run_phase(uvm_phase phase);
     super.run_phase(phase);
-    $display("display from the driver1");
+   // $display("display from the driver1");
     //for first cycle
     @(vif.ahb_drv_cb);
     vif.ahb_drv_cb.Hresetn <= 1'b0;
