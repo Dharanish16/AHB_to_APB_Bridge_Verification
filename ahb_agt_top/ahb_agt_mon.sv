@@ -53,7 +53,7 @@ endtask
 //collect data task of ahb agent monitor
 task ahb_agt_mon::collect_data();
 
-    //$display("monitor");
+    $display("monitor");
     //$display("%0d",vif.ahb_mon_cb.Haddr);
     
     //memory for ahb_xtn
